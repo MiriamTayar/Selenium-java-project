@@ -1,94 +1,111 @@
-# Selenium Java Automation Project – E-commerce Simulation
+# 🛒 Selenium Java Automation Project – E-commerce Testing Suite
 
-## Overview
-This project automates an online shopping process on a real e-commerce website using **Java**, **Selenium WebDriver**, and **JUnit**.
+## 📌 Overview
 
-It simulates user behavior including:
-- Logging in
-- Navigating product categories
-- Adding items to the shopping cart
+This project automates the testing of an e-commerce website using **Java**, **Selenium WebDriver**, and **JUnit**.  
+It simulates real user actions such as:
+
+- Logging into a user account
+- Browsing product categories (Baby, Accessories, Kitchenware, etc.)
+- Adding products to the shopping cart
+- Switching site language
 - Filling out a checkout form
-- Completing a payment attempt
+- Performing a mock payment (credit card flow)
 
-The project follows the **Page Object Model (POM)** design pattern for maintainability and readability.
+The automation framework is built using the **Page Object Model (POM)** pattern to enhance reusability, maintainability, and clarity.
 
 ---
 
-## Technologies Used
+## 🧰 Technologies Used
+
 - Java (OOP)
 - Selenium WebDriver
 - JUnit
 - ExtentReports
-- Maven (if added)
 - ChromeDriver
-- XPath / CSS Selectors
+- XPath & CSS Selectors
 - JavaScriptExecutor
+- Maven (for dependencies and build)
 
 ---
 
-## Project Structure
+## 📂 Project Structure
 
 ```
-Selenium-java-project/
+SeleniumJavaProject/
 ├── src/
-│   └── java/
-│       ├── pages/
-│       │   ├── HomePage.java
-│       │   ├── ProductPage.java
-│       │   ├── PaymentPage.java
-│       │   └── SignInPage.java
-│       └── tests/
-│           └── SanityTest.java
-├── index.html  (Extent Report)
+│   └── test/
+│       └── java/
+│           ├── pages/
+│           │   ├── HomePage.java
+│           │   ├── ProductPage.java
+│           │   ├── PaymentPage.java
+│           │   └── SignInPage.java
+│           ├── tests/
+│           │   └── SanityTest.java
+│           └── utilities/
+│               ├── Constants.java
+│               └── Methods.java
+├── target/
+├── pom.xml
+├── config.xml
 └── README.md
+
 ```
 
 ---
 
-## Features Tested
+---
 
-### Login Flow
-- Enter username and password
-- Validate login
+## ✅ Features Covered
 
-### Homepage Navigation
-- Navigate through kitchenware, accessories, and seasonal items
-- Switch language to Hebrew
-- Perform product search
+### 🔐 Login Flow
+- Navigate to "My Account"
+- Input email and password
+- (Optional) Submit login form
 
-### Product Page
-- Select baby product category
-- Choose size and color
-- Add multiple items to the bag
-- Check shopping cart
+### 🏠 Home Page
+- Navigate through categories (Kitchenware, Accessories, Spring Home)
+- Change site language to Hebrew
+- Search for a product via search bar
 
-### Checkout & Payment
-- Fill full checkout form
-- Choose credit card payment
+### 🍼 Product Page
+- Navigate to Baby category
+- Select product by color and size
+- Add item(s) to shopping cart
+- View and verify cart contents
+
+### 💳 Payment Page
+- Fill complete guest checkout form
+- Select credit card as payment method
 - Enter card details
-- Validate error handling for invalid card
+- Validate error handling for incorrect card number
 
 ---
 
-## Test Automation
+## 🧪 Test Automation
 
-The test runner (`SanityTest.java`) includes:
-- `@BeforeClass`: Chrome setup, URL navigation
-- `@Test`: Separate test cases per section
-- `@AfterClass`: Teardown with `driver.quit()`
+All tests are managed inside the `SanityTest.java` class and include:
 
----
-
-## Test Reports
-Test results are generated with **ExtentReports** and saved as `index.html` in the project root.
+- `@BeforeClass`: Sets up Chrome browser and navigates to homepage
+- `@Test`: Contains separate test methods for login, home navigation, product flow, and checkout
+- `@AfterClass`: Closes browser after tests are finished
 
 ---
 
-## Author
+## 📊 Reports
+
+Test execution generates HTML reports using **ExtentReports**, saved to `index.html` at the project root.
+
+---
+
+## 🧠 Author
+
 Developed by Miriam Tayar
-> A QA enthusiast combining code, logic, and design to build automated test flows with clarity and precision.
+> Combining technical skill and UI logic to build automated flows for real-world testing.
 
 ---
 
-## Note
-This project is for learning and testing purposes only. The payment form does not interact with real payment systems.
+## 📎 Note
+
+This project is for educational and QA practice purposes only. No actual payment is processed.
