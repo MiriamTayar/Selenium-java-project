@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+    <set>
+
+        <USERNAME>LALALALALALALALAL</USERNAME>
+        <PASSWORD>SHALOMMMMMM</PASSWORD>
+        <BROWSER>chrome</BROWSER>
+    </set>
+
+    <set>
+
+        <USERNAME>**********</USERNAME>
+        <PASSWORD>noPass</PASSWORD>
+    </set>
+
+    <set>
+
+        <USERNAME>djkhdkjf</USERNAME>
+        <PASSWORD>nosdfjdkPass</PASSWORD>
+    </set>
+
+    <set>
+
+        <USERNAME>iiiiiiii</USERNAME>
+        <PASSWORD>bbbbb</PASSWORD>
+    </set>
+</config>
